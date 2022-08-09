@@ -15,6 +15,8 @@ import br.com.mailproject.service.EmailService;
 public class EmailBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	private static final String DESTINATARIO = "mauricio.sponton.testes@gmail.com";
+	private static final String ASSUNTO = "Montador de email com JSF";
 	
 	@Inject
 	private EmailService emailService;
@@ -26,7 +28,7 @@ public class EmailBean implements Serializable{
 	
 	private Email montarEmail() {
 		var layout = new EmailLayout();
-		return layout.montarEmailAdmin("mauricio.sponton.testes@gmail.com", "Montador de email com JSF");
+		return layout.montarEmailAdmin(DESTINATARIO, ASSUNTO);
 	}
 
 }
