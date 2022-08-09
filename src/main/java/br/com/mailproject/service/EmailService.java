@@ -22,7 +22,7 @@ import br.com.mailproject.util.LogUtil;
 public class EmailService extends Thread {
 
 	private List<Email> emails;
-	private static final String HEADER_CONTEXT = "text/html charset=utf-8";
+	private static final String HEADER_CONTEXT = "text/html; charset=utf-8";
 
 	public void enviar(Email email) {
 		emails = new ArrayList<>();
